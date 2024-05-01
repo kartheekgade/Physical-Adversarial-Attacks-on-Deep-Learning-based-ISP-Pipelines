@@ -44,9 +44,8 @@ We seperated our code into various components, there is the MAIN block and then 
 	$ python mian.py —skip_train —test_dir /Desktop/Adversarial_ISP/skyb-aim2020-public/data/test/huwaei_raw
 
 ## Dataset
-We subsetted the original ZRR Dataset (https://people.ee.ethz.ch/~ihnatova/pynet.html#dataset) which was in this directory '/test/huawei_raw/', this originally had 1204 items.
-Our initial subset we looked for objects we though could be identified by YOLO, this narrowed it down to 107 items, then we ran our YOLO model and found that only 58 were identified 
-correctly, according to ground truth photos.
+We subsetted the original ZRR Dataset (https://people.ee.ethz.ch/~ihnatova/pynet.html#dataset) which was in this directory '/test/huawei_raw/', originally this dataset contained 1204 images.
+Our initial subset we looked for objects we thought could be identified by YOLO, such as cars, leaves, traffic signs, windows, etc - this narrowed the dataset down to 107 items. We then ran the YOLOv7 model and found that only 58 were identified correctly, according to ground truth photos.
 So from here we compiled the final 58 images to utilize for our project; this represents our final dataset size, since each dataset is a pair - the ground truth to the pynetca-enhanced/processed photos.
 All images from each dataset are paired and have matching indices. These are the indices of the photos we selected for our final dataset:
 indices = {6, 28, 41, 42, 43, 60, 81, 114, 115, 116, 117, 142, 158, 178, 179, 183, 184, 192, 201, 211, 212, 213, 222, 249,
