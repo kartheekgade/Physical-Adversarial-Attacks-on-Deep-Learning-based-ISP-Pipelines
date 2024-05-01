@@ -5,6 +5,7 @@ We developed a patch-based adverarial attack algorithm to explicitly attack the 
 
 ## The code in the notebook
 We seperated our code into various components, there is the MAIN block and then there are EXTRA blocks which are highly useful. We break them down as follows:
+'''
 	1. MAIN block
  		- Full dataset image patch attack, with SSIM. THIS CODE GENERATES A FGSM PATCH ATTACK, takes in a patch_size, epsilon value, and steps (iterations)
 			you can also alter the location of the patch by simply changing the values of center_h and center_w, this determines where the
