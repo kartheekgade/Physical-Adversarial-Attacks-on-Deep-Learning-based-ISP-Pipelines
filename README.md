@@ -5,23 +5,20 @@ We developed a patch-based adverarial attack algorithm to explicitly attack the 
 
 ## The code in the notebook
 We seperated our code into various components, there is the MAIN block and then there are EXTRA blocks which are highly useful. We break them down as follows:
-'''
-	1. MAIN block
+      
+      1. MAIN block
  		- Full dataset image patch attack, with SSIM. THIS CODE GENERATES A FGSM PATCH ATTACK, takes in a patch_size, epsilon value, and steps (iterations)
 			you can also alter the location of the patch by simply changing the values of center_h and center_w, this determines where the
    			center of the patch is located with respect to the RAW input image of size 448x448
       2. EXTRA CODE BLOCK 1
       		- Single image patch attack, with SSIM. THIS CODE GENERATES A FGSM PATCH ATTACK, takes in a patch_size, epsilon value, and steps (iterations)
 			This DOES incorporate SSIM into the loss function
-
       3. EXTRA CODE BLOCK 2
       		- Single full image attack, with SSIM. THIS CODE GENERATES A FGSM FULL IMAGE ATTACK, full image means the entire image gets perturbed not just a specific portion/patch.This DOES 				incorporate SSIM into the loss function
       4. EXTRA CODE BLOCK 3 
       		- Single image random patch attack, no SSIM. THIS CODE GENERATES A RANDOMIZED PATCH of a given size (patch_size) and at the center of the input image. This does not incorporate SSIM 				into the loss function
-
       5. EXTRA CODE BLOCK 4 
       		- Full dataset single image random patch attack, no SSIM incorporated as loss (USES MSE instead)
-
       6. Remainder of code is stuff we used for experimentation and background knowledge, this includes work with RGB images and FGSM attacks.
 
 ## These are the steps to get PyNET-CA environment set up and running
